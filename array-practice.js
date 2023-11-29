@@ -24,13 +24,35 @@ const smallerThanCurr = arr => {
 };
 
 const twoSum = (arr, target) => {
+  for (let num of arr) {
+    for (let num2 of arr) {
+      if (num + num2 === target) {
+        return true;
+      } 
+      
+      }
 
-  // Your code here
-};
+    }
+    return false;
+  }
+  
 
 const secondLargest = arr => {
-
-  // Your code here
+  let largest = -Infinity
+  if (arr.length <= 1) return undefined;
+  for (let num of arr) {
+    if (num > largest) {
+      largest = num
+    }
+  }
+  arr.splice(arr.indexOf(largest), 1)
+  let largest2 = -Infinity
+  for (let number of arr) {
+    if (number > largest2) {
+      largest2 = number
+    }
+  }
+  return largest2;
 };
 
 const shuffle = (arr) => {
