@@ -28,14 +28,14 @@ const twoSum = (arr, target) => {
     for (let num2 of arr) {
       if (num + num2 === target) {
         return true;
-      } 
-      
+      }
+
       }
 
     }
     return false;
   }
-  
+
 
 const secondLargest = arr => {
   let largest = -Infinity
@@ -56,8 +56,27 @@ const secondLargest = arr => {
 };
 
 const shuffle = (arr) => {
+  // let newArr= []
 
-  // Your code here
+  // let largest = -Infinity
+  // if (arr.length <= 1) return undefined;
+
+  // for(let num of arr){
+  //     if (num > largest) {
+  //       largest = num
+  //     }
+  //   newArr.push(Math.floor(Math.random() * largest))
+  // }
+  // console.log(newArr)
+  // return newArr;
+  let newArr = arr.slice()
+  let j;
+  for(let i = newArr.length -1; i > 0 ; i--){
+    j = (Math.floor(Math.random() * (i + 1)))
+    [newArr[i],newArr[j]] = [newArr[j], newArr[i]]
+  }
+  console.log(newArr)
+  return newArr;
 };
 
 
