@@ -5,40 +5,37 @@ const findMinimum = arr => {
   if (num < smallest) {
     smallest = num
   }
- } 
+ }
  return smallest;
  }
 
 
 const runningSum = arr => {
-
-  // Your code here 
+  let sum = 0;
+  return arr.map(num => sum += num)
 };
 
 const evenNumOfChars = arr => {
-
-  // Your code here 
+  return (arr.filter(str => str.length %2 === 0)).length
 };
 
 const smallerThanCurr = arr => {
-
-  // Your code here 
-
+  return arr.map(num => arr.filter(num2 => num2 < num).length)
 };
 
 const twoSum = (arr, target) => {
 
-  // Your code here 
+  // Your code here
 };
 
 const secondLargest = arr => {
 
-  // Your code here 
+  // Your code here
 };
 
 const shuffle = (arr) => {
 
-  // Your code here 
+  // Your code here
 };
 
 
