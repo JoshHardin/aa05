@@ -1,8 +1,14 @@
 const findMinimum = arr => {
+  let smallest = Infinity
+  if (!arr.length) return undefined;
+ for (let num of arr) {
+  if (num < smallest) {
+    smallest = num
+  }
+ } 
+ return smallest;
+ }
 
-  // Your code here 
-
-};
 
 const runningSum = arr => {
 
